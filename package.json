@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o -p 8080",
+    "start": "ng serve -o --host=localhost --port=4200",
     "build": "ng build",
     "prod": "ng build --prod --aot=true --buildOptimizer=true --deleteOutputPath=true --base-href=/emajin/",
-    "serve-prod": "angular-http-server -o -p 8080 --path dist --baseHref emajin",
+    "start-prod": "angular-http-server -o -p 8080 --path dist --baseHref emajin",
     "deploy": "ng deploy --base-href=/emajin/",
     "test": "ng test",
     "lint": "ng lint",
