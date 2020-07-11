@@ -1,27 +1,24 @@
-# Emajin
+# eMajin
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
+_Aplicación web que sirve como buscador de imágenes, haciendo uso del API de [Unsplash](https://unsplash.com/)_
 
-## Development server
+### Pre-requisitos 📋
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- El usuario debe poder introducir el término de búsqueda que desee y la web tiene que mostrar las imágenes relacionadas. Las imágenes deben poder ampliarse y ver sus detalles.
 
-## Code scaffolding
+- Front-end: Angular
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Construido con 🛠️
 
-## Build
+* [Angular](https://angular.io/) - TypeScript-based open-source web application framework 
+* [Unsplash](https://unsplash.com/) - API
+* [Yarn](https://yarnpkg.com/) Node Package Manager
+* [WebStorm](https://www.jetbrains.com/webstorm/) - IDE
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Autores ✒️
 
-## Running unit tests
+* **Francisco Sanchez** - [fsancheztemprano](https://github.com/fsancheztemprano)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Licencia 📄
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
