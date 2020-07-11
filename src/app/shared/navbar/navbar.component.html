@@ -1,9 +1,27 @@
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo" mdbStickyHeader>
-  <mdb-navbar-brand>
-    <a class="navbar-brand" href="#">
-      <mdb-icon fas icon="camera-retro" size="2x"></mdb-icon>
-      eMajin
-    </a>
-  </mdb-navbar-brand>
-</mdb-navbar>
+<div class="mb-5">
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo" mdbStickyHeader>
+    <mdb-navbar-brand>
+      <a class="navbar-brand" href="#">
+        <mdb-icon fas icon="camera-retro" size="2x"></mdb-icon>
+        eMajin
+      </a>
+    </mdb-navbar-brand>
+    <links>
+
+      <ul class="navbar-nav ml-auto">
+      </ul>
+      <!-- Search form -->
+      <form class="form-inline waves-light" mdbWavesEffect>
+        <div class="md-form my-0">
+          <label for="search"></label>
+          <input #search id="search" class="form-control mr-sm-2" type="text" placeholder="Search"
+                 (input)="navSearchService.searchInputChange($event)">
+        </div>
+      </form>
+      <mdb-icon fas icon="search" aria-hidden="true" class="text-white cursor-pointer"
+                (click)="navSearchService.searchInputAction(search)"></mdb-icon>
+    </links>
+    <!-- Collapsible content -->
+  </mdb-navbar>
+</div>
 

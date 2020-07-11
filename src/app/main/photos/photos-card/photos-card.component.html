@@ -1,0 +1,25 @@
+<div class="card h-100 my-2">
+  <!--Card image-->
+  <div class="view overlay">
+    <p class="card-text d-inline"></p>
+    <img class="card-img-top" src="{{photo.urls.small}}" alt="Card image cap">
+    <a href="#!" title="{{photo.description}}">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+  <div class="m-2">
+
+    <div class="row d-flex justify-content-between">
+      <div class="col-2">
+        <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">
+      </div>
+      <div class="col-8 overflow-hidden text-nowrap">{{photo.user.name}}</div>
+      <div class="col-2 px-0">
+        <a type="button" class="btn btn-light" href="{{photo.links.download}}?force=true'">
+          <i class="fas fa-arrow-down" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>

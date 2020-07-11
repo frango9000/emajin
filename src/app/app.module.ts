@@ -5,6 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {SharedModule} from './shared/shared.module';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    InfiniteScrollModule
 
   ],
   providers: [],
