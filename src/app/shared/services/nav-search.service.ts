@@ -12,11 +12,11 @@ export class NavSearchService {
   constructor() {
   }
 
-  searchInputChange($event: Event): void {
-    this.searchChange.next($event.target.value);
+  searchInputChange(search: HTMLInputElement): void {
+    this.searchChange.next(search.value);
   }
 
-  searchInputAction(search: HTMLInputElement) {
+  searchInputAction(search: HTMLInputElement): void {
     this.searchAction.next(search.value);
   }
 }

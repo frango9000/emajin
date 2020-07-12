@@ -1,6 +1,7 @@
 <div class="row m-5">
-  <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center justify-content-center"
-       *ngFor="let photo of photos | async">
-    <app-photos-card [photo]="photo"></app-photos-card>
+  <div
+    class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center justify-content-center align-items-stretch my-2"
+    *ngFor="let photo of photos | async">
+    <app-photos-card class="h-100" [photo]="photo"></app-photos-card>
   </div>
 </div>

@@ -1,1 +1,50 @@
-<p>photos-detail works!</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <!-- Card -->
+    <mdb-card>      <!--Card content-->
+
+      <div class="container">
+        <div class="row w-100 m-1">
+          <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">
+          <div class="overflow-hidden text-nowrap ml-2 mt-1">{{photo.user.name}}</div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+            <!-- Card img -->
+            <img src="{{photo.urls.regular}}" alt="Card image cap" height="600vh" title="{{photo.description}}">
+          </div>
+        </div>
+      </div>
+
+
+      <mdb-card-footer>
+
+        <div class="row justify-content-between w-100  ">
+          <div class="col-2">
+            <mdb-badge color="red" class="">
+              <h5 style="margin-bottom: -2px">{{photo.likes}}
+                <mdb-icon fas icon="heart" size="1x"></mdb-icon>
+              </h5>
+            </mdb-badge>
+          </div>
+          <div class="col-auto"></div>
+          <div class="col-1 ">
+            <a class="" href="{{photo.links.download}}?force=true'">
+              <mdb-badge color="grey" class="">
+                <h5 style="margin-bottom: -2px">
+                  <mdb-icon fas icon="arrow-down" size="1x"></mdb-icon>
+                </h5>
+              </mdb-badge>
+            </a>
+          </div>
+        </div>
+      </mdb-card-footer>
+    </mdb-card>
+    <!-- Card -->
+    <img>
+  </div>
+
+</div>

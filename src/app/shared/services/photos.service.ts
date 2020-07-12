@@ -15,8 +15,18 @@ export class PhotosService {
 
   public getListPhotos(): Observable<UnsplashPhoto[]> {
     // @ts-ignore
-    return from(this.unsplashService.unsplash().photos.listPhotos(1, 50).then(response => response.json())
-    ).pipe(
+    return from(this.unsplashService.unsplash().photos.listPhotos(1, 50).then(
+      response => response.json()
+    )).pipe(
+      tap(source => console.log(source))
+    );
+  }
+
+  public getPhoto(photoId: string): Observable<UnsplashPhoto> {
+    // @ts-ignore
+    return from(this.unsplashService.unsplash().photos.getPhoto(photoId).then(
+      response => response.json()
+    )).pipe(
       tap(source => console.log(source))
     );
   }

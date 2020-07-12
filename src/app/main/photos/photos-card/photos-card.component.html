@@ -1,25 +1,111 @@
-<div class="card h-100 my-2">
-  <!--Card image-->
-  <div class="view overlay">
-    <p class="card-text d-inline"></p>
-    <img class="card-img-top" src="{{photo.urls.small}}" alt="Card image cap">
-    <a href="#!" title="{{photo.description}}">
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
-  <div class="m-2">
+<div class="container h-100">
+  <div class="row justify-content-center h-100">
+    <!-- Card -->
+    <mdb-card class="h-100">      <!--Card content-->
 
-    <div class="row d-flex justify-content-between">
-      <div class="col-2">
-        <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">
+      <div class="container">
+        <div class="row w-100 m-1">
+          <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">
+          <div class="overflow-hidden text-nowrap ml-2 mt-1">{{photo.user.name}}</div>
+        </div>
       </div>
-      <div class="col-8 overflow-hidden text-nowrap">{{photo.user.name}}</div>
-      <div class="col-2 px-0">
-        <a type="button" class="btn btn-light" href="{{photo.links.download}}?force=true'">
-          <i class="fas fa-arrow-down" aria-hidden="true"></i>
-        </a>
+
+      <div class="container h-100">
+        <div class="row align-middle">
+          <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+            <!-- Card img -->
+            <a [routerLink]="['/photos', photo.id]" title="{{photo.description}}">
+              <img src="{{photo.urls.small}}" alt="Card image cap">
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
+
+
+      <mdb-card-footer>
+
+        <div class="row justify-content-between w-100  ">
+          <div class="col-2">
+            <mdb-badge color="red" class="">
+              <h5 style="margin-bottom: -2px">{{photo.likes}}
+                <mdb-icon fas icon="heart" size="1x"></mdb-icon>
+              </h5>
+            </mdb-badge>
+          </div>
+          <div class="col-auto"></div>
+          <div class="col-1 ">
+            <a class="" href="{{photo.links.download}}?force=true'">
+              <mdb-badge color="grey" class="">
+                <h5 style="margin-bottom: -2px">
+                  <mdb-icon fas icon="arrow-down" size="1x"></mdb-icon>
+                </h5>
+              </mdb-badge>
+            </a>
+          </div>
+        </div>
+      </mdb-card-footer>
+    </mdb-card>
+    <!-- Card -->
+    <img>
   </div>
 
 </div>
+
+
+<!--&lt;!&ndash;<div class="card h-100">&ndash;&gt;-->
+<!--<mdb-card class="h-100">-->
+<!--  <div class="view overlay  h-100" title="{{photo.description}}">-->
+<!--    &lt;!&ndash;  Author Header &ndash;&gt;-->
+<!--    <div class="row m-2">-->
+<!--      <div class="col-2">-->
+<!--        <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">-->
+<!--      </div>-->
+<!--      <div class="col-10 overflow-hidden text-nowrap">{{photo.user.name}}</div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash;Card image&ndash;&gt;-->
+<!--    <div class="row align-self-stretch ">-->
+<!--      <div class="col ">-->
+
+<!--
+<!--          <img class=" " src="{{photo.urls.small}}" alt="Card image cap">-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="my-5"></div>-->
+
+<!--    &lt;!&ndash;  Likes and Download&ndash;&gt;-->
+<!--    <mdb-card-body *ngIf="photo.description">-->
+<!--      &lt;!&ndash;Title&ndash;&gt;-->
+<!--      &lt;!&ndash;      <mdb-card-title>&ndash;&gt;-->
+<!--      &lt;!&ndash;      </mdb-card-title>&ndash;&gt;-->
+<!--      &lt;!&ndash;Text&ndash;&gt;-->
+<!--      <mdb-card-text>{{photo.description}}</mdb-card-text>-->
+<!--      &lt;!&ndash;      <h4>{{photo}}</h4>&ndash;&gt;-->
+<!--    </mdb-card-body>-->
+
+
+<!--    <mdb-card-footer>-->
+<!--    <div class="row justify-content-between m-1 px-1 pr-3 w-100 py-2 ">-->
+<!--      <div class="col-2">-->
+<!--        <mdb-badge color="red" class="">-->
+<!--          <h5 style="margin-bottom: -2px">{{photo.likes}}-->
+<!--            <mdb-icon fas icon="heart" size="1x"></mdb-icon>-->
+<!--          </h5>-->
+<!--        </mdb-badge>-->
+<!--      </div>-->
+<!--      <div class="col-2 ">-->
+<!--        <a class="" href="{{photo.links.download}}?force=true'">-->
+<!--          <mdb-badge color="grey" class="">-->
+<!--            <h5 style="margin-bottom: -2px">-->
+<!--              <mdb-icon fas icon="arrow-down" size="1x"></mdb-icon>-->
+<!--            </h5>-->
+<!--          </mdb-badge>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    </mdb-card-footer>-->
+
+<!--  </div>-->
+<!--</mdb-card>-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
