@@ -8,6 +8,7 @@ import {PhotosCardComponent} from './photos-card/photos-card.component';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import {NgxScrollTopModule} from 'ngx-scrolltop';
+import {NgImageFullscreenViewModule} from 'ng-image-fullscreen-view';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {NgxScrollTopModule} from 'ngx-scrolltop';
     PhotosRoutingModule,
     MDBBootstrapModule.forRoot(),
     InfiniteScrollModule,
-    NgxScrollTopModule
+    NgxScrollTopModule,
+    NgImageFullscreenViewModule
   ]
 })
 export class PhotosModule {

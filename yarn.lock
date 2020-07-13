@@ -5805,6 +5805,13 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
+ng-image-fullscreen-view@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/ng-image-fullscreen-view/-/ng-image-fullscreen-view-1.0.3.tgz#80c8813b2aac6c2b72d65617d293a485133a391f"
+  integrity sha512-m8mLflthmKcTt2E6hrXfDH4uOqgizCj/p0ZtEBZMvZPq7cQ6bfPWfsDt++tzeX0pR3EsVOmnmsLD1BMn7YvXtQ==
+  dependencies:
+    tslib "^1.9.0"
+
 ngx-infinite-scroll@^9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/ngx-infinite-scroll/-/ngx-infinite-scroll-9.0.0.tgz#8e648c266dd5744ed5aa68568a5479f398c94a2f"
