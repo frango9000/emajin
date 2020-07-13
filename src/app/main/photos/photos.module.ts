@@ -6,6 +6,8 @@ import {PhotosHomeComponent} from './photos-home/photos-home.component';
 import {PhotosDetailComponent} from './photos-detail/photos-detail.component';
 import {PhotosCardComponent} from './photos-card/photos-card.component';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
+import {NgxScrollTopModule} from 'ngx-scrolltop';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
   imports: [
     CommonModule,
     PhotosRoutingModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    InfiniteScrollModule,
+    NgxScrollTopModule
   ]
 })
 export class PhotosModule {

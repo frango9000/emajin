@@ -1098,6 +1098,11 @@
   dependencies:
     mkdirp "^1.0.4"
 
+"@scarf/scarf@0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@scarf/scarf/-/scarf-0.1.5.tgz#fc4cc88294eca336eed9a91549180346de5e6946"
+  integrity sha512-Fx6atDc7JM1r0WkPCDhNetVZNp+DO21q/HGlomAKBG+k8vb1B8fg8Yige4oCf1P9OWTZWm5tM5i3jlXhrSbNOg==
+
 "@schematics/angular@10.0.2":
   version "10.0.2"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-10.0.2.tgz#e8ef09f9c1833aaa9c109164c16e2bd458ba814c"
@@ -5800,6 +5805,21 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
+ngx-infinite-scroll@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-infinite-scroll/-/ngx-infinite-scroll-9.0.0.tgz#8e648c266dd5744ed5aa68568a5479f398c94a2f"
+  integrity sha512-C8JhvrTip/AKv6f8oiB+GJjW+FGE3EPIc3Kk+v3MICGlW0nkOetyJDe/ejXr8tI8zwbNjbfvAKFRKenibDIW6w==
+  dependencies:
+    "@scarf/scarf" "0.1.5"
+    opencollective-postinstall "^2.0.2"
+
+ngx-scrolltop@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-scrolltop/-/ngx-scrolltop-1.0.0.tgz#2a56559a9916f6e235d038b13066e259271b466e"
+  integrity sha512-yfiKBVRXDC6wr9N0RWgJwKiC8Qk4mQw5dJqAcfxEtv/o3O2uzbEzJvEp2MV2x5hzlJjq/SrdgFk4HuCD6Wxitg==
+  dependencies:
+    tslib "^2.0.0"
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
@@ -6119,6 +6139,11 @@ open@7.0.4:
   dependencies:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
+
+opencollective-postinstall@^2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
+  integrity sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
 
 opn@^5.3.0, opn@^5.5.0:
   version "5.5.0"
