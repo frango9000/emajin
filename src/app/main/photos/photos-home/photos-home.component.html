@@ -1,7 +1,12 @@
-<div class="row m-5">
+<div class="row my-5">
   <div
     class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center justify-content-center align-items-stretch my-2"
-    *ngFor="let photo of photos | async">
-    <app-photos-card class="h-100" [photo]="photo"></app-photos-card>
+    *ngFor="let photo of photos ">
+    <app-photos-card class="h-100  w-100" [photo]="photo"></app-photos-card>
+  </div>
+</div>
+<div class="row my-2">
+  <div class="col text-center">
+    <button mdbBtn type="button" color="blue" mdbWavesEffect (click)="loadMore()">Load More</button>
   </div>
 </div>
