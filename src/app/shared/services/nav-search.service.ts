@@ -9,6 +9,8 @@ export class NavSearchService {
   searchAction: Subject<string> = new Subject<string>();
   searchChange: Subject<string> = new Subject<string>();
 
+  private searchActionActive = true;
+
   constructor() {
   }
 
@@ -17,6 +19,16 @@ export class NavSearchService {
   }
 
   searchInputAction(search: HTMLInputElement): void {
-    this.searchAction.next(search.value);
+    if (this.searchActionActive) {
+      this.searchAction.next(search.value);
+    }
+  }
+
+  disableAction() {
+    this.searchActionActive = false;
+  }
+
+  enableAction() {
+    this.searchActionActive = true;
   }
 }

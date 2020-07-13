@@ -11,15 +11,17 @@
       <ul class="navbar-nav ml-auto">
       </ul>
       <!-- Search form -->
-      <form class="form-inline waves-light" mdbWavesEffect>
+      <form class="form-inline waves-light" mdbWavesEffect onSubmit="return false;">
         <div class="md-form my-0">
           <label for="search"></label>
           <input #search id="search" class="form-control mr-sm-2" type="text" placeholder="Search"
-                 (input)="navSearchService.searchInputChange(search)">
+                 (input)="navSearchService.searchInputChange(search)"
+                 (keyup.enter)="navSearchService.searchInputAction(search)">
+          <mdb-icon fas icon="search" aria-hidden="true" class="text-white cursor-pointer"
+                    (click)="navSearchService.searchInputAction(search)"></mdb-icon>
         </div>
       </form>
-      <mdb-icon fas icon="search" aria-hidden="true" class="text-white cursor-pointer"
-                (click)="navSearchService.searchInputAction(search)"></mdb-icon>
+
     </links>
     <!-- Collapsible content -->
   </mdb-navbar>

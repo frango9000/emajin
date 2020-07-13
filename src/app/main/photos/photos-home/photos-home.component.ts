@@ -1,30 +1,37 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {PhotosService} from '../../../shared/services/photos.service';
 import {UnsplashPhoto} from '../../../shared/domain/unsplash-photo';
 import {NavSearchService} from '../../../shared/services/nav-search.service';
 import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
 import {UnsplashSearch} from '../../../shared/domain/unsplash-search';
-import {Observable} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-photos-home',
   templateUrl: './photos-home.component.html',
   styleUrls: ['./photos-home.component.scss']
 })
-export class PhotosHomeComponent implements OnInit {
+export class PhotosHomeComponent implements OnInit, OnDestroy {
 
   photos: UnsplashPhoto[] = [];
 
   unsplashSearch = new UnsplashSearch();
 
+  subscription: Subscription;
 
   constructor(private photoService: PhotosService,
-              private navSearchService: NavSearchService) {
+              private navSearchService: NavSearchService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.photoService.getListPhotos().subscribe(value => this.photos = value);
-    this.navSearchService.searchChange.pipe(
+    this.navSearchService.disableAction();
+
+    const q = this.route.snapshot.queryParamMap.get('query');
+    this.unsplashSearch.query = q ? q : '';
+
+    this.subscription = this.navSearchService.searchChange.pipe(
       debounceTime(300),
       distinctUntilChanged()
     ).subscribe(value => {
@@ -32,7 +39,14 @@ export class PhotosHomeComponent implements OnInit {
       this.unsplashSearch.page = 1;
       this.fetchBooks();
     });
+    this.fetchBooks();
   }
+
+  ngOnDestroy(): void {
+    this.navSearchService.enableAction();
+    this.subscription.unsubscribe();
+  }
+
 
   private fetchBooks(): void {
     let observable: Observable<UnsplashPhoto[]>;
