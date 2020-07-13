@@ -37,9 +37,9 @@ export class PhotosHomeComponent implements OnInit, OnDestroy {
     ).subscribe(value => {
       this.unsplashSearch.query = value;
       this.unsplashSearch.page = 1;
-      this.fetchBooks();
+      this.fetchPhotos();
     });
-    this.fetchBooks();
+    this.fetchPhotos();
   }
 
   ngOnDestroy(): void {
@@ -48,7 +48,7 @@ export class PhotosHomeComponent implements OnInit, OnDestroy {
   }
 
 
-  private fetchBooks(): void {
+  private fetchPhotos(): void {
     let observable: Observable<UnsplashPhoto[]>;
     observable = (this.unsplashSearch.query.length > 0) ?
       this.photoService.searchPhotos(this.unsplashSearch) :
@@ -64,6 +64,6 @@ export class PhotosHomeComponent implements OnInit, OnDestroy {
 
   loadMore(): void {
     this.unsplashSearch.page++;
-    this.fetchBooks();
+    this.fetchPhotos();
   }
 }

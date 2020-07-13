@@ -1,29 +1,29 @@
 <div class="container h-100">
   <div class="row justify-content-center h-100">
-    <!-- Card -->
-    <mdb-card class="h-100  w-100" style="min-width: 135px">      <!--Card content-->
 
+    <!-- Card -->
+    <mdb-card class="h-100  w-100" style="min-width: 135px; max-width: 360px">
+      <!--Card content-->
       <div class="container">
-        <div class="row m-1">
+        <div class="row m-1 cursor-pointer" [routerLink]="['/user', photo.user.username]"
+             title="{{photo.user.username}}">
           <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">
           <div class="overflow-hidden text-nowrap ml-2 mt-1">{{photo.user.name}}</div>
         </div>
       </div>
 
-      <div class="container h-100">
-        <div class="row align-middle">
+      <div class="h-100">
+        <div class="w-100 ">
           <div class="view rgba-white-slight waves-light  w-100" mdbWavesEffect>
             <!-- Card img -->
-            <a [routerLink]="['/photos', photo.id]" title="{{photo.description}}">
-              <img src="{{photo.urls.regular}}" alt="Card image cap" class="img-fluid  w-100" style="max-height: 65vh">
+            <a [routerLink]="['/photos', photo.id]" title="{{photo.description}}" class="w-100">
+              <img src="{{photo.urls.regular}}" alt="Card image cap" class="img-fluid" style="max-height: 65vh">
             </a>
           </div>
         </div>
       </div>
 
-
       <mdb-card-footer>
-
         <div class="row justify-content-between w-100  ">
           <div class="col-2">
             <mdb-badge color="red" class="">
@@ -45,67 +45,5 @@
         </div>
       </mdb-card-footer>
     </mdb-card>
-    <!-- Card -->
-    <img>
   </div>
-
 </div>
-
-
-<!--&lt;!&ndash;<div class="card h-100">&ndash;&gt;-->
-<!--<mdb-card class="h-100">-->
-<!--  <div class="view overlay  h-100" title="{{photo.description}}">-->
-<!--    &lt;!&ndash;  Author Header &ndash;&gt;-->
-<!--    <div class="row m-2">-->
-<!--      <div class="col-2">-->
-<!--        <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">-->
-<!--      </div>-->
-<!--      <div class="col-10 overflow-hidden text-nowrap">{{photo.user.name}}</div>-->
-<!--    </div>-->
-
-<!--    &lt;!&ndash;Card image&ndash;&gt;-->
-<!--    <div class="row align-self-stretch ">-->
-<!--      <div class="col ">-->
-
-<!--
-<!--          <img class=" " src="{{photo.urls.small}}" alt="Card image cap">-->
-<!--        </a>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class="my-5"></div>-->
-
-<!--    &lt;!&ndash;  Likes and Download&ndash;&gt;-->
-<!--    <mdb-card-body *ngIf="photo.description">-->
-<!--      &lt;!&ndash;Title&ndash;&gt;-->
-<!--      &lt;!&ndash;      <mdb-card-title>&ndash;&gt;-->
-<!--      &lt;!&ndash;      </mdb-card-title>&ndash;&gt;-->
-<!--      &lt;!&ndash;Text&ndash;&gt;-->
-<!--      <mdb-card-text>{{photo.description}}</mdb-card-text>-->
-<!--      &lt;!&ndash;      <h4>{{photo}}</h4>&ndash;&gt;-->
-<!--    </mdb-card-body>-->
-
-
-<!--    <mdb-card-footer>-->
-<!--    <div class="row justify-content-between m-1 px-1 pr-3 w-100 py-2 ">-->
-<!--      <div class="col-2">-->
-<!--        <mdb-badge color="red" class="">-->
-<!--          <h5 style="margin-bottom: -2px">{{photo.likes}}-->
-<!--            <mdb-icon fas icon="heart" size="1x"></mdb-icon>-->
-<!--          </h5>-->
-<!--        </mdb-badge>-->
-<!--      </div>-->
-<!--      <div class="col-2 ">-->
-<!--        <a class="" href="{{photo.links.download}}?force=true'">-->
-<!--          <mdb-badge color="grey" class="">-->
-<!--            <h5 style="margin-bottom: -2px">-->
-<!--              <mdb-icon fas icon="arrow-down" size="1x"></mdb-icon>-->
-<!--            </h5>-->
-<!--          </mdb-badge>-->
-<!--        </a>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    </mdb-card-footer>-->
-
-<!--  </div>-->
-<!--</mdb-card>-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->

@@ -1,7 +1,7 @@
 <div class="mb-5">
   <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo" mdbStickyHeader>
     <mdb-navbar-brand>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" [routerLink]="['/photos']">
         <mdb-icon fas icon="camera-retro" size="2x"></mdb-icon>
         eMajin
       </a>
@@ -16,7 +16,7 @@
           <label for="search"></label>
           <input #search id="search" class="form-control mr-sm-2" type="text" placeholder="Search"
                  (input)="navSearchService.searchInputChange(search)"
-                 (keyup.enter)="navSearchService.searchInputAction(search)">
+                 (keydown.enter)="navSearchService.searchInputAction(search)">
           <mdb-icon fas icon="search" aria-hidden="true" class="text-white cursor-pointer"
                     (click)="navSearchService.searchInputAction(search)"></mdb-icon>
         </div>

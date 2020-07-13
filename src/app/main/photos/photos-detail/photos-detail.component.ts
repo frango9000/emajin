@@ -32,7 +32,6 @@ export class PhotosDetailComponent implements OnInit {
             title: this.photo.description
           });
         });
-
       }
     );
 
@@ -46,7 +45,4 @@ export class PhotosDetailComponent implements OnInit {
     this.showFlag = false;
   }
 
-  showInfo(): void {
-
-  }
 }

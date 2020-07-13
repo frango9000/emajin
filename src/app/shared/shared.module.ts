@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {NavbarComponent} from './navbar/navbar.component';
 import {FooterComponent} from './footer/footer.component';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
   ],
   imports: [
     CommonModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    RouterModule
   ]
 })
 export class SharedModule {
