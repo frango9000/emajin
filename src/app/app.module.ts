@@ -5,7 +5,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {SharedModule} from './shared/shared.module';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
-import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuthInterceptor} from './shared/services/auth.interceptor';
 
@@ -18,8 +17,7 @@ import {AuthInterceptor} from './shared/services/auth.interceptor';
     AppRoutingModule,
     SharedModule,
     MDBBootstrapModule.forRoot(),
-    InfiniteScrollModule, HttpClientModule
-
+    HttpClientModule
   ],
   providers: [
     {

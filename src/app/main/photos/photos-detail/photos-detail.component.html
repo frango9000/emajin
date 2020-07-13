@@ -1,4 +1,4 @@
-<div class="container my-5" *ngIf="photo">
+<div class="container" *ngIf="photo">
   <div class="row justify-content-center">
     <!-- Card -->
     <mdb-card>      <!--Card content-->
@@ -14,7 +14,8 @@
         <div class="row">
           <div class="view rgba-white-slight waves-light" mdbWavesEffect>
             <!-- Card img -->
-            <img src="{{photo.urls.full}}" alt="Card image cap" height="600vh" title="{{photo.description}}">
+            <img src="{{photo.urls.full}}" alt="Card image cap" class="img-fluid" style="max-height: 65vh"
+                 title="{{photo.description}}">
           </div>
         </div>
       </div>
