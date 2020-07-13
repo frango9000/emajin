@@ -9,7 +9,6 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import {NgxScrollTopModule} from 'ngx-scrolltop';
 import {NgImageFullscreenViewModule} from 'ng-image-fullscreen-view';
-import {FlipModule} from 'ngx-flip';
 
 
 @NgModule({
@@ -27,8 +26,7 @@ import {FlipModule} from 'ngx-flip';
     MDBBootstrapModule.forRoot(),
     InfiniteScrollModule,
     NgxScrollTopModule,
-    NgImageFullscreenViewModule,
-    FlipModule
+    NgImageFullscreenViewModule
   ]
 })
 export class PhotosModule {
