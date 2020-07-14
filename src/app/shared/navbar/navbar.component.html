@@ -1,5 +1,5 @@
 <div class="mb-5">
-  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo" mdbStickyHeader>
+  <mdb-navbar SideClass="navbar navbar-expand-md navbar-dark indigo justify-content-between" mdbStickyHeader>
     <mdb-navbar-brand>
       <a class="navbar-brand" [routerLink]="['/photos']">
         <mdb-icon fas icon="camera-retro" size="2x"></mdb-icon>
@@ -7,8 +7,7 @@
       </a>
     </mdb-navbar-brand>
     <links>
-
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link waves-light" mdbWavesEffect href="https://github.com/fsancheztemprano/emajin">
             <mdb-icon fab icon="github" size="1x"></mdb-icon>
@@ -16,20 +15,20 @@
           </a>
         </li>
       </ul>
-      <!-- Search form -->
-      <form class="form-inline waves-light" mdbWavesEffect onSubmit="return false;">
-        <div class="md-form my-0">
-          <label for="search"></label>
-          <input #search id="search" class="form-control mr-sm-2" type="text" placeholder="Search"
+    </links>
+    <div class="w-50">
+      <form class="form-inline waves-light waves-light w-100" mdbWavesEffect onSubmit="return false;">
+        <div class="md-form my-0 d-flex w-100">
+          <input #search class="form-control mr-sm-2 w-100" type="text" placeholder="Search" aria-label="Search"
                  (input)="navSearchService.searchInputChange(search)"
                  (keydown.enter)="navSearchService.searchInputAction(search)">
-          <mdb-icon fas icon="search" aria-hidden="true" class="text-white cursor-pointer"
-                    (click)="navSearchService.searchInputAction(search)"></mdb-icon>
+          <a class="" (click)="navSearchService.searchInputAction(search)">
+            <mdb-icon fas icon="search" aria-hidden="true" class="text-white cursor-pointer"></mdb-icon>
+          </a>
         </div>
       </form>
+    </div>
 
-    </links>
-    <!-- Collapsible content -->
   </mdb-navbar>
 </div>
 

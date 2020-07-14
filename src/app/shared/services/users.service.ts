@@ -3,7 +3,6 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {UnsplashPhoto} from '../domain/unsplash-photo';
 import {environment} from '../../../environments/environment';
-import {tap} from 'rxjs/operators';
 import {UnsplashUser} from '../domain/unsplash-user';
 
 @Injectable({
@@ -16,7 +15,7 @@ export class UsersService {
 
   public getUser(user: string): Observable<UnsplashUser> {
     return this.httpClient.get<UnsplashUser>(environment.apiUrl + '/users/' + user).pipe(
-      tap(source => console.log(source))
+      // tap(source => console.log(source))
     );
   }
 
@@ -26,7 +25,7 @@ export class UsersService {
       .append('per_page', String(perPage))
       .append('order_by', orderBy);
     return this.httpClient.get<UnsplashPhoto[]>(environment.apiUrl + '/users/' + user + '/photos', {params: pageParams}).pipe(
-      tap(source => console.log(source))
+      // tap(source => console.log(source))
     );
   }
 }

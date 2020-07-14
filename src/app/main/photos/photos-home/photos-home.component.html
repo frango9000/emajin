@@ -12,7 +12,8 @@
 </div>
 <div class="row my-2">
   <div class="col text-center">
-    <button mdbBtn type="button" color="blue" mdbWavesEffect (click)="loadMore()">Load More</button>
+    <button mdbBtn type="button" color="blue" mdbWavesEffect
+            (click)="loadMore()">{{photos.length > 0 ? 'Load More' : 'No Photos Found'}}</button>
   </div>
 </div>
 <ngx-scrolltop backgroundColor="#3f51b5" symbolColor="white" size="60"></ngx-scrolltop>

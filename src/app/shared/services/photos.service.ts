@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
-import {map, tap} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 import {UnsplashPhoto} from '../domain/unsplash-photo';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
@@ -21,13 +21,13 @@ export class PhotosService {
       .append('per_page', String(perPage))
       .append('order_by', orderBy);
     return this.httpClient.get<UnsplashPhoto[]>(environment.apiUrl + '/photos', {params: pageParams}).pipe(
-      tap(source => console.log(source))
+      // tap(source => console.log(source))
     );
   }
 
   public getPhoto(photoId: string): Observable<UnsplashPhoto> {
     return this.httpClient.get<UnsplashPhoto>(environment.apiUrl + '/photos/' + photoId).pipe(
-      tap(source => console.log(source))
+      // tap(source => console.log(source))
     );
   }
 
@@ -45,7 +45,7 @@ export class PhotosService {
     }
     return this.httpClient.get<any>(environment.apiUrl + '/search/photos', {params: pageParams}).pipe(
       map(response => response.results),
-      tap(source => console.log(source))
+      // tap(source => console.log(source))
     );
   }
 

@@ -2,22 +2,22 @@
   <div class="row justify-content-center h-100">
 
     <!-- Card -->
-    <mdb-card class="h-100  w-100" style="min-width: 135px; max-width: 360px">
+    <mdb-card class="h-100  w-100">
       <!--Card content-->
-      <div class="container">
-        <div class="row m-1 cursor-pointer" [routerLink]="['/user', photo.user.username]"
-             title="{{photo.user.username}}">
+      <div class="container border-bottom cursor-pointer" [routerLink]="['/user', photo.user.username]">
+        <div class="row m-2 " title="{{photo.user.username}}">
           <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">
           <div class="overflow-hidden text-nowrap ml-2 mt-1">{{photo.user.name}}</div>
         </div>
       </div>
 
-      <div class="h-100">
-        <div class="w-100 ">
-          <div class="view rgba-white-slight waves-light  w-100" mdbWavesEffect>
+      <div class="h-100 w-100">
+        <div class="h-100 w-100 ">
+          <div class="rgba-white-slight waves-light d-flex h-100 w-100" mdbWavesEffect
+               [ngStyle]="{'background-color':photo.color}">
             <!-- Card img -->
-            <a [routerLink]="['/photos', photo.id]" title="{{photo.description}}" class="w-100">
-              <img src="{{photo.urls.regular}}" alt="Card image cap" class="img-fluid" style="max-height: 65vh">
+            <a [routerLink]="['/photos', photo.id]" title="{{photo.description}}" class="m-auto w-100 ">
+              <img src="{{photo.urls.regular}}" alt="Card image cap" class="w-100 photo-element">
             </a>
           </div>
         </div>
@@ -26,17 +26,17 @@
       <mdb-card-footer>
         <div class="row justify-content-between w-100  ">
           <div class="col-2">
-            <mdb-badge color="red" class="">
-              <h5 style="margin-bottom: -2px">{{photo.likes}}
+            <mdb-badge color="red">
+              <h5>{{photo.likes}}
                 <mdb-icon fas icon="heart" size="1x"></mdb-icon>
               </h5>
             </mdb-badge>
           </div>
           <div class="col-auto"></div>
           <div class="col-1 ">
-            <a class="" href="{{photo.links.download}}?force=true'">
-              <mdb-badge color="grey" class="">
-                <h5 style="margin-bottom: -2px">
+            <a href="{{photo.links.download}}?force=true'">
+              <mdb-badge color="grey">
+                <h5>
                   <mdb-icon fas icon="arrow-down" size="1x"></mdb-icon>
                 </h5>
               </mdb-badge>

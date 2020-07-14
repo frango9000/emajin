@@ -15,9 +15,7 @@ export class AuthInterceptor implements HttpInterceptor {
         'Authorization': 'Client-ID m6Dq_dEKg2HOtJIVrVvqjqlz1MTLG3So0xLUnMy3GBw'
       })
     });
-
-    console.log('Intercepted HTTP call', authReq);
-
+    // console.log('Intercepted HTTP call', authReq);
     return next.handle(authReq);
   }
 }
