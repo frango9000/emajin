@@ -23,3 +23,7 @@ _Aplicación web que sirve como buscador de imágenes, haciendo uso del API de [
 ## Licencia 📄
 
 Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE](LICENSE) para detalles
+
+## Screenshots
+
+![ss1](https://user-images.githubusercontent.com/43641397/87353393-f9648900-c55c-11ea-801e-18f643988de4.png)
