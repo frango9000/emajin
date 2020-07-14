@@ -1,4 +1,4 @@
-# eMajin => [DEMO](https://fsancheztemprano.github.io/emajin/photos) <=
+# eMajin => [DEMO](https://fsancheztemprano.github.io/emajin) <=
 
 _Aplicación web que sirve como buscador de imágenes, haciendo uso del API de [Unsplash](https://unsplash.com/)_
 
