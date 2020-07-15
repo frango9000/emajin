@@ -26,8 +26,11 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE](L
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/43641397/87465750-75baa300-c615-11ea-8fbd-6ae650ea3d1d.png)
 
-![image](https://user-images.githubusercontent.com/43641397/87465847-9b47ac80-c615-11ea-98bb-81fbd083d023.png)
+![image](https://user-images.githubusercontent.com/43641397/87604250-9ad41200-c6f8-11ea-9075-8b59b845ee3e.png)
 
-![image](https://user-images.githubusercontent.com/43641397/87465871-a4387e00-c615-11ea-9602-be58ab956981.png)
+![image](https://user-images.githubusercontent.com/43641397/87604360-a58ea700-c6f8-11ea-8c13-7543889cd7e0.png)
+
+![image](https://user-images.githubusercontent.com/43641397/87597693-842abc80-c6f2-11ea-8de3-01bd9b092ee9.png)
+
+![image](https://user-images.githubusercontent.com/43641397/87604945-dc64bd00-c6f8-11ea-92fe-8f04ad355424.png)
