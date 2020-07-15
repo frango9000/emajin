@@ -8,22 +8,18 @@
     </div>
   </div>
 
-  <div class="h-100 w-100">
-    <div class="h-100 w-100 ">
       <div class="rgba-white-slight waves-light d-flex h-100 w-100" mdbWavesEffect
            [ngStyle]="{'background-color':photo.color}">
         <!-- Card img -->
         <a [routerLink]="['/photos', photo.id]" title="{{photo.description}}" class="m-auto w-100 ">
           <img src="{{photo.urls.regular}}" alt="Card image cap" class="w-100 photo-element">
         </a>
-      </div>
     </div>
-  </div>
 
   <mdb-card-footer>
     <div class="row justify-content-between w-100  ">
       <div class="col-2">
-        <mdb-badge color="red">
+        <mdb-badge color="red" title="Likes">
           <h5>{{photo.likes}}
             <mdb-icon fas icon="heart" size="1x"></mdb-icon>
           </h5>
@@ -31,7 +27,7 @@
       </div>
       <div class="col-auto"></div>
       <div class="col-1 ">
-        <a href="{{photo.links.download}}?force=true'">
+        <a href="{{photo.links.download}}?force=true'" title="Download">
           <mdb-badge color="grey">
             <h5>
               <mdb-icon fas icon="arrow-down" size="1x"></mdb-icon>
