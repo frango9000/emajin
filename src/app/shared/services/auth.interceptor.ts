@@ -12,8 +12,8 @@ export class AuthInterceptor implements HttpInterceptor {
     const authReq = request.clone({
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        // 'Authorization': 'Client-ID m6Dq_dEKg2HOtJIVrVvqjqlz1MTLG3So0xLUnMy3GBw'
-        'Authorization': 'Client-ID ofGnGuPr1A-ahrJqftw8S3RGQlR-1-A7dEbUSY3zcgw'
+        'Authorization': 'Client-ID m6Dq_dEKg2HOtJIVrVvqjqlz1MTLG3So0xLUnMy3GBw'
+        // 'Authorization': 'Client-ID ofGnGuPr1A-ahrJqftw8S3RGQlR-1-A7dEbUSY3zcgw'
       })
     });
     // console.log('Intercepted HTTP call', authReq);

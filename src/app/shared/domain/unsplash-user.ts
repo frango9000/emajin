@@ -10,6 +10,8 @@ export interface UnsplashUser {
   'total_collections': number;
   'instagram_username': string;
   'twitter_username': string;
+  'followers_count': number;
+  'following_count': number;
   'profile_image': {
     'small': string;
     'medium': string;

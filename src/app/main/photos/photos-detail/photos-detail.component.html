@@ -1,7 +1,7 @@
 <div class="" *ngIf="photo">
   <div class="row justify-content-center mt-4 mt-sm-2">
     <mdb-card>
-      <div class="row align-items-end ml-3 my-2 cursor-pointer" [routerLink]="['/user', photo.user.username]"
+      <div class="row ml-3 my-2 cursor-pointer" [routerLink]="['/user', photo.user.username]"
            title="{{photo.user.username}}">
         <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">
         <div class="overflow-hidden text-nowrap pl-2 pb-2">{{photo.user.name}}</div>
@@ -24,7 +24,7 @@
       </div>
 
       <mdb-card-footer class="pb-0">
-        <div class="row justify-content-between w-100 mt-2 ">
+        <div class="row w-100 mt2 ">
           <div class="col-6">
             <mdb-badge color="red" class="" title="Likes">
               <h5 style="margin-bottom: -2px">{{photo.likes}}
