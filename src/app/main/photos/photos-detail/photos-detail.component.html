@@ -109,7 +109,9 @@
               </tr>
               <tr>
                 <th scope="col">Tags</th>
-                <td><span *ngFor="let tag of photo.tags">{{tag.title}}, </span></td>
+                <td><span *ngFor="let tag of photo.tags"><a [routerLink]="['/photos']"
+                                                            [queryParams]="{query: tag.title}">{{tag.title}}</a>, </span>
+                </td>
               </tr>
               </tbody>
             </table>
