@@ -1,6 +1,5 @@
-<div class="row mt-5 mt-sm-2 justify-content-center" *ngIf="user">
-
-  <mdb-card class=" mb-4">
+<div class="row mt-sm-2 justify-content-center" *ngIf="user">
+  <mdb-card class="mb-4">
     <div class="container cursor-pointer border-bottom">
       <div class="row m-2 " title="{{user.username}}">
         <img src="{{user.profile_image.large}}" width="40" height="38" alt="avatar" class="rounded-circle"
@@ -108,15 +107,16 @@
       <app-photos-card class="h-100  w-100" [photo]="photo"></app-photos-card>
     </div>
   </div>
-  <div class="row my-2">
-    <div class="col text-center">
-      <button mdbBtn type="button" color="blue" mdbWavesEffect (click)="loadMore()">Load More</button>
-    </div>
+
+</div>
+<div class="row my-2">
+  <div class="col text-center">
+    <button mdbBtn type="button" color="blue" mdbWavesEffect (click)="loadMore()">Load More</button>
   </div>
-  <ngx-scrolltop backgroundColor="#3f51b5" symbolColor="white" size="60"></ngx-scrolltop>
 </div>
 <ng-image-fullscreen-view
   [images]="images"
   [imageIndex]="0"
   [show]="showFlag"
   (close)="closeEventHandler()"></ng-image-fullscreen-view>
+<ngx-scrolltop backgroundColor="#3f51b5" symbolColor="white" size="60"></ngx-scrolltop>
