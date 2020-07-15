@@ -1,4 +1,4 @@
-<div class="row mt-sm-2 justify-content-center" *ngIf="user">
+<div class="row mt-sm-2 my-2 p-0 px-md-4 justify-content-center" *ngIf="user">
   <mdb-card class="mb-4">
     <div class="container cursor-pointer border-bottom">
       <div class="row m-2 " title="{{user.username}}">
@@ -94,26 +94,25 @@
   </mdb-card>
 </div>
 
-<div class="row">
-  <div class="row mx-md-2"
-       infiniteScroll
-       [infiniteScrollDistance]="2"
-       [infiniteScrollThrottle]="50"
-       (scrolled)="loadMore()">
+<div class="row justify-content-center px-md-2"
+     infiniteScroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     (scrolled)="loadMore()">
 
-    <div
-      class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center justify-content-center align-items-stretch my-2"
-      *ngFor="let photo of photos ">
-      <app-photos-card class="h-100  w-100" [photo]="photo"></app-photos-card>
-    </div>
+  <div
+    class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center justify-content-center align-items-stretch my-2 p-0 p-md-2"
+    *ngFor="let photo of photos ">
+    <app-photos-card class="h-100  w-100 p-0" [photo]="photo"></app-photos-card>
   </div>
-
 </div>
+
 <div class="row my-2">
   <div class="col text-center">
     <button mdbBtn type="button" color="blue" mdbWavesEffect (click)="loadMore()">Load More</button>
   </div>
 </div>
+
 <ng-image-fullscreen-view
   [images]="images"
   [imageIndex]="0"
