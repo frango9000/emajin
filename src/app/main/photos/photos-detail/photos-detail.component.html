@@ -1,120 +1,199 @@
 <div class="" *ngIf="photo">
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <mdb-card class="w-100">
-        <div class="row w-100 m-2 align-items-end m-1 cursor-pointer" [routerLink]="['/user', photo.user.username]"
-             title="{{photo.user.username}}">
-          <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">
-          <div class="overflow-hidden text-nowrap ml-2 mt-1">{{photo.user.name}}</div>
-        </div>
+  <div class="row justify-content-center mt-4 mt-sm-2">
+    <mdb-card>
+      <div class="row align-items-end ml-3 my-2 cursor-pointer" [routerLink]="['/user', photo.user.username]"
+           title="{{photo.user.username}}">
+        <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">
+        <div class="overflow-hidden text-nowrap pl-2 pb-2">{{photo.user.name}}</div>
+      </div>
 
-        <div class="view rgba-white-slight waves-light d-flex h-100 w-100 m-auto" style=" min-height: 200px"
-             mdbWavesEffect [ngStyle]="{'background-color':photo.color}">
-          <!-- Card img -->
+      <div class="view rgba-white-slight waves-light d-flex h-100 w-100 m-auto" style=" min-height: 200px"
+           mdbWavesEffect [ngStyle]="{'background-color':photo.color}">
+        <!-- Card img -->
 
-          <img src="{{photo.urls.regular}}"
-               alt="Card image cap"
-               class="img-fluid  m-auto"
-               style="max-height: 65vh;"
-               title="{{photo.description}}" (click)="showLightbox()">
-          <ng-image-fullscreen-view
-            [images]="images"
-            [imageIndex]="0"
-            [show]="showFlag"
-            (close)="closeEventHandler()"></ng-image-fullscreen-view>
-        </div>
+        <img src="{{photo.urls.regular}}"
+             alt="Card image cap"
+             class="img-fluid  m-auto"
+             style="max-height: 65vh;"
+             title="{{photo.description}}" (click)="showLightbox()">
+        <ng-image-fullscreen-view
+          [images]="images"
+          [imageIndex]="0"
+          [show]="showFlag"
+          (close)="closeEventHandler()"></ng-image-fullscreen-view>
+      </div>
 
-        <mdb-card-footer class="pb-0">
-          <div class="row justify-content-between w-100 mt-2 ">
-            <div class="col-6">
-              <mdb-badge color="red" class="" title="Likes">
-                <h5 style="margin-bottom: -2px">{{photo.likes}}
-                  <mdb-icon fas icon="heart" size="1x"></mdb-icon>
-                </h5>
-              </mdb-badge>
-            </div>
-
-            <div class="col-6">
-              <ul class="right-buttons list-inline">
-                <li class="list-inline-item px-1">
-                  <a class="" (click)="showLightbox()" title="Fullscreen">
-                    <mdb-badge color="grey" class="">
-                      <h5>
-                        <mdb-icon fas icon="expand" size="1x"></mdb-icon>
-                      </h5>
-                    </mdb-badge>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="" href="{{photo.links.download}}?force=true'" title="Download">
-                    <mdb-badge color="grey" class="">
-                      <h5>
-                        <mdb-icon fas icon="arrow-down" size="1x"></mdb-icon>
-                      </h5>
-                    </mdb-badge>
-                  </a>
-                </li>
-              </ul>
-            </div>
+      <mdb-card-footer class="pb-0">
+        <div class="row justify-content-between w-100 mt-2 ">
+          <div class="col-6">
+            <mdb-badge color="red" class="" title="Likes">
+              <h5 style="margin-bottom: -2px">{{photo.likes}}
+                <mdb-icon fas icon="heart" size="1x"></mdb-icon>
+              </h5>
+            </mdb-badge>
           </div>
-        </mdb-card-footer>
-      </mdb-card>
-    </div>
+
+          <div class="col-6">
+            <ul class="right-buttons list-inline">
+              <li class="list-inline-item px-1">
+                <a class="" (click)="showLightbox()" title="Fullscreen">
+                  <mdb-badge color="grey" class="">
+                    <h5>
+                      <mdb-icon fas icon="expand" size="1x"></mdb-icon>
+                    </h5>
+                  </mdb-badge>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="" href="{{photo.links.download}}?force=true'" title="Download">
+                  <mdb-badge color="grey" class="">
+                    <h5>
+                      <mdb-icon fas icon="arrow-down" size="1x"></mdb-icon>
+                    </h5>
+                  </mdb-badge>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </mdb-card-footer>
+    </mdb-card>
   </div>
   <div class="row justify-content-center">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-6 col-lg-4">
       <mdb-card>
         <!--Card header-->
-        <div class="container">
-          <div class="row w-100 m-1 cursor-pointer" title="Camera info">
-            <a mdbBtn floating="true" size="md">
-              <mdb-icon fas icon="camera"></mdb-icon>
-            </a>
-            <div class="overflow-hidden text-nowrap ml-2 mt-1">Camera Info</div>
-          </div>
+        <div class="row w-100 m-1 cursor-pointer m-2 ml-3" title="Photo info">
+          <a mdbBtn floating="true">
+            <mdb-icon fas icon="camera" size="2x"></mdb-icon>
+          </a>
+          <div class="overflow-hidden text-nowrap ml-2 mt-1">Photo Info</div>
         </div>
-        <!--Card content-->
         <mdb-card-body>
-
-          <!--Title-->
-          <mdb-card-title>
-            <h4>Card Title</h4>
-          </mdb-card-title>
-
-          <!--Text-->
-          <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-            content.
+          <mdb-card-text>
+            <table class="table">
+              <tbody>
+              <tr>
+                <th scope="col">Created:</th>
+                <td>{{photo.created_at}}</td>
+              </tr>
+              <tr>
+                <th scope="col">Updated:</th>
+                <td>{{photo.updated_at}}</td>
+              </tr>
+              <tr>
+                <th scope="col">Description:</th>
+                <td>{{photo.description}}</td>
+              </tr>
+              <tr>
+                <th scope="col">Height:</th>
+                <td>{{photo.height}} px</td>
+              </tr>
+              <tr>
+                <th scope="col">Width:</th>
+                <td>{{photo.width}} px</td>
+              </tr>
+              <tr>
+                <th scope="col">Color:</th>
+                <td><span [ngStyle]="{'background-color':photo.color}" title="{{photo.color}}">  </span>
+                  ( {{photo.color}} )
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Likes:</th>
+                <td>{{photo.likes}}</td>
+              </tr>
+              <tr>
+                <th scope="col">Downloads:</th>
+                <td>{{photo.downloads}}</td>
+              </tr>
+              <tr>
+                <th scope="col">Tags</th>
+                <td><span *ngFor="let tag of photo.tags">{{tag.title}}, </span></td>
+              </tr>
+              </tbody>
+            </table>
           </mdb-card-text>
-
-          <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
         </mdb-card-body>
       </mdb-card>
     </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-6 col-lg-4"
+         *ngIf="photo.exif && ( photo.exif.iso || photo.exif.make || photo.exif.model || photo.exif.aperture || photo.exif.focal_length || photo.exif.exposure_time )">
       <mdb-card>
         <!--Card header-->
-        <div class="container">
-          <div class="row w-100 m-1 cursor-pointer" title="Camera info">
-            <a mdbBtn floating="true" size="md">
-              <mdb-icon fas icon="camera"></mdb-icon>
-            </a>
-            <div class="overflow-hidden text-nowrap ml-2 mt-1">Location Info</div>
-          </div>
+        <div class="row w-100 m-1 cursor-pointer m-2 ml-3" title="Camera info">
+          <a mdbBtn floating="true">
+            <mdb-icon fas icon="camera" size="2x"></mdb-icon>
+          </a>
+          <div class="overflow-hidden text-nowrap ml-2 mt-1">Camera Info</div>
         </div>
-        <!--Card content-->
         <mdb-card-body>
-
-          <!--Title-->
-          <mdb-card-title>
-            <h4>Card Title</h4>
-          </mdb-card-title>
-
-          <!--Text-->
-          <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-            content.
+          <mdb-card-text>
+            <table class="table">
+              <tbody>
+              <tr>
+                <th scope="col">Camera:</th>
+                <td>{{photo.exif.make}}</td>
+              </tr>
+              <tr>
+                <th scope="col">Model:</th>
+                <td>{{photo.exif.model}}</td>
+              </tr>
+              <tr>
+                <th scope="col">Aperture:</th>
+                <td>{{photo.exif.aperture}}</td>
+              </tr>
+              <tr>
+                <th scope="col">Exposure Time:</th>
+                <td>{{photo.exif.exposure_time}}</td>
+              </tr>
+              <tr>
+                <th scope="col">Focal Length:</th>
+                <td>{{photo.exif.focal_length}}</td>
+              </tr>
+              <tr>
+                <th scope="col">ISO:</th>
+                <td>{{photo.exif.iso}}</td>
+              </tr>
+              </tbody>
+            </table>
           </mdb-card-text>
-
-          <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4"
+         *ngIf="photo.location && ( photo.location.country || photo.location.city || photo.location.position.latitude || photo.location.position.longitude )">
+      <mdb-card>
+        <!--Card header-->
+        <div class="row w-100 m-1 cursor-pointer m-2 ml-3" title="Location info">
+          <a mdbBtn floating="true">
+            <mdb-icon fas icon="map-marked-alt" size="2x"></mdb-icon>
+          </a>
+          <div class="overflow-hidden text-nowrap ml-2 mt-1">Location Info</div>
+        </div>
+        <mdb-card-body>
+          <mdb-card-text>
+            <table class="table">
+              <tbody>
+              <tr>
+                <th scope="col">Country:</th>
+                <td>{{photo.location.country}}</td>
+              </tr>
+              <tr>
+                <th scope="col">City:</th>
+                <td>{{photo.location.city}}</td>
+              </tr>
+              <tr>
+                <th scope="col">Latitude:</th>
+                <td>{{photo.location.position.latitude}}</td>
+              </tr>
+              <tr>
+                <th scope="col">Longitude:</th>
+                <td>{{photo.location.position.longitude}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </mdb-card-text>
         </mdb-card-body>
       </mdb-card>
     </div>

@@ -8,6 +8,7 @@ export interface UnsplashPhoto {
   'updated_at': Date;
   'width': number;
   'height': number;
+  'downloads': number;
   'color': string;
   'likes': number;
   'liked_by_user': boolean;
