@@ -1,10 +1,13 @@
-<div class="" *ngIf="photo">
-  <div class="row justify-content-center mt-4 mt-sm-2">
+<div class="container-fluid  px-md-4 px-0" *ngIf="photo">
+
+  <div class="row justify-content-center mt-2">
     <mdb-card>
-      <div class="row ml-3 my-2 cursor-pointer" [routerLink]="['/user', photo.user.username]"
-           title="{{photo.user.username}}">
-        <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">
-        <div class="overflow-hidden text-nowrap pl-2 pb-2">{{photo.user.name}}</div>
+      <div class="container-fluid cursor-pointer border-bottom">
+        <div class="row m-2" [routerLink]="['/user', photo.user.username]"
+             title="{{photo.user.username}}">
+          <img src="{{photo.user.profile_image.small}}" width="40" height="38" alt="avatar" class="rounded-circle">
+          <div class="overflow-hidden text-nowrap pl-2 pb-2">{{photo.user.name}}</div>
+        </div>
       </div>
 
       <div class="view rgba-white-slight waves-light d-flex h-100 w-100 m-auto" style=" min-height: 200px"
@@ -14,7 +17,7 @@
         <img src="{{photo.urls.regular}}"
              alt="Card image cap"
              class="img-fluid  m-auto"
-             style="max-height: 65vh;"
+             style="max-height: 80vh;"
              title="{{photo.description}}" (click)="showLightbox()">
         <ng-image-fullscreen-view
           [images]="images"
@@ -59,15 +62,17 @@
       </mdb-card-footer>
     </mdb-card>
   </div>
-  <div class="row justify-content-center">
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <mdb-card>
+  <div class="row justify-content-center ">
+    <div class="col-12 col-md-6 col-xl-4 px-0 px-md-2">
+      <mdb-card class="w-100">
         <!--Card header-->
-        <div class="row w-100 m-1 cursor-pointer m-2 ml-3" title="Photo info">
-          <a mdbBtn floating="true">
-            <mdb-icon fas icon="camera" size="2x"></mdb-icon>
-          </a>
-          <div class="overflow-hidden text-nowrap ml-2 mt-1">Photo Info</div>
+        <div class="container-fluid cursor-pointer border-bottom">
+          <div class="row m-2" title="Photo info">
+            <a mdbBtn floating="true">
+              <mdb-icon fas icon="info" size="2x"></mdb-icon>
+            </a>
+            <div class="overflow-hidden text-nowrap pl-2 pt-1">Photo Info</div>
+          </div>
         </div>
         <mdb-card-body>
           <mdb-card-text>
@@ -119,15 +124,17 @@
         </mdb-card-body>
       </mdb-card>
     </div>
-    <div class="col-sm-12 col-md-6 col-lg-4"
+    <div class="col-12 col-md-6 col-xl-4 px-0 px-md-2"
          *ngIf="photo.exif && ( photo.exif.iso || photo.exif.make || photo.exif.model || photo.exif.aperture || photo.exif.focal_length || photo.exif.exposure_time )">
       <mdb-card>
         <!--Card header-->
-        <div class="row w-100 m-1 cursor-pointer m-2 ml-3" title="Camera info">
-          <a mdbBtn floating="true">
-            <mdb-icon fas icon="camera" size="2x"></mdb-icon>
-          </a>
-          <div class="overflow-hidden text-nowrap ml-2 mt-1">Camera Info</div>
+        <div class="container-fluid cursor-pointer border-bottom">
+          <div class="row m-2" title="Camera info">
+            <a mdbBtn floating="true">
+              <mdb-icon fas icon="camera" size="2x"></mdb-icon>
+            </a>
+            <div class="overflow-hidden text-nowrap pl-2 pt-1">Camera Info</div>
+          </div>
         </div>
         <mdb-card-body>
           <mdb-card-text>
@@ -163,15 +170,17 @@
         </mdb-card-body>
       </mdb-card>
     </div>
-    <div class="col-sm-12 col-md-6 col-lg-4"
+    <div class="col-12 col-md-6 col-xl-4 px-0 px-md-2"
          *ngIf="photo.location && ( photo.location.country || photo.location.city || photo.location.position.latitude || photo.location.position.longitude )">
       <mdb-card>
         <!--Card header-->
-        <div class="row w-100 m-1 cursor-pointer m-2 ml-3" title="Location info">
-          <a mdbBtn floating="true">
-            <mdb-icon fas icon="map-marked-alt" size="2x"></mdb-icon>
-          </a>
-          <div class="overflow-hidden text-nowrap ml-2 mt-1">Location Info</div>
+        <div class="container-fluid cursor-pointer border-bottom">
+          <div class="row m-2" title="Location info">
+            <a mdbBtn floating="true">
+              <mdb-icon fas icon="map-marked-alt" size="2x"></mdb-icon>
+            </a>
+            <div class="overflow-hidden text-nowrap pl-2 pt-1">Location Info</div>
+          </div>
         </div>
         <mdb-card-body>
           <mdb-card-text>
